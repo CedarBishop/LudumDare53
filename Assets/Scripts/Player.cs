@@ -35,7 +35,8 @@ public class Player : MonoBehaviour
         isReversing = currentSpeed < 0;
         rigidbody.velocity = transform.up * currentSpeed;
         transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * (isReversing? 1: -1));
-        print("target speed: " + scaledTargetSpeed + ", current speed: " + rigidbody.velocity.magnitude);
+        //print("target speed: " + scaledTargetSpeed + ", current speed: " + rigidbody.velocity.magnitude);
+        print(GetCurrentSpeed());
     }
 
     public void OnIncreaseSpeed()
@@ -60,4 +61,16 @@ public class Player : MonoBehaviour
     {
         currentHorizontalValue = value.Get<float>();
     }
+
+    public float GetCurrentSpeed()
+    {
+        return currentSpeed / realWorldToInGameScalar;
+    }
+
+    public float GetCruiseControlSpeed()
+    {
+        return currentTargetSpeed;
+    }
+
+
 }
