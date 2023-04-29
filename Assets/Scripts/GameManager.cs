@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        SelectTrip(new Trip(levelManager.pickupDropoffLocations));
     }
 
     private void Update()
@@ -63,8 +62,8 @@ public class GameManager : MonoBehaviour
     {
         currentTrip.dropoffLocation.gameObject.SetActive(false);
         currentTrip.startedFare = false;
-        print("Finished trip");
         FinishedFareEvent?.Invoke(currentTrip);
+        currentTrip = null;
     }
 }
 
@@ -80,7 +79,8 @@ public class Trip
         } while (potentialDropoffLocation == potentialPickupLocation);
         pickupLocation = potentialPickupLocation;
         dropoffLocation = potentialDropoffLocation;
-
+        passengerName = "John";
+        fare = 5;
         // calculate starting fare
     }
     public PickupDropoffLocations pickupLocation;
@@ -89,4 +89,5 @@ public class Trip
     public float fare;
     public float time;
     public bool startedFare = false;
+    public string passengerName;
 }
