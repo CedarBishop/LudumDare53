@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     {
         currentTrip = trip;
         currentTrip.pickupLocation.gameObject.SetActive(true);
-        AcceptedFareEvent(currentTrip);
+        AcceptedFareEvent?.Invoke(currentTrip);
     }
 
     public void PickedUpPassenger()
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         currentTrip.dropoffLocation.gameObject.SetActive(true);
         currentTrip.time = 0;
         currentTrip.startedFare = true;
-        StartedFareEvent(currentTrip);
+        StartedFareEvent?.Invoke(currentTrip);
     }
 
     public void DroppedOffPasenger()
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         currentTrip.dropoffLocation.gameObject.SetActive(false);
         currentTrip.startedFare = false;
         print("Finished trip");
-        FinishedFareEvent(currentTrip);
+        FinishedFareEvent?.Invoke(currentTrip);
     }
 }
 
