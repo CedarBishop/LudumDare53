@@ -1546,6 +1546,14 @@ PrefabInstance:
       propertyPath: brakeSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: useNewDrivingControls
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: reverseAccelerationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3384678822720454958, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: m_Name
       value: PlayerCar
