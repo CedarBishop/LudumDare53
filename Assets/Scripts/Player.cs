@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     public float speedIntervals;
     public float realWorldToInGameScalar;
     public float turnSpeed;
+    public float accelerationSpeed;
+    public float maxForwardSpeed;
+    public float maxReverseSpeed;
     
     private float currentHorizontalValue;
     private float currentTargetSpeed;
@@ -21,19 +24,29 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rigidbody.velocity = transform.up * currentTargetSpeed * realWorldToInGameScalar;
+        float scaledTargetSpeed = currentTargetSpeed * realWorldToInGameScalar;
+        float currentSpeed = Mathf.Lerp(rigidbody.velocity.magnitude, scaledTargetSpeed, accelerationSpeed * Time.fixedDeltaTime);
+        rigidbody.velocity = transform.up * currentSpeed;
         transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * -1);
-        Vector3.Slerp(transform.position, transform.position + (transform.right * currentHorizontalValue), turnSpeed);
+        print("target speed: " + scaledTargetSpeed + ", current speed: " + rigidbody.velocity.magnitude);
     }
 
     public void OnIncreaseSpeed()
     {
         currentTargetSpeed += speedIntervals;
+        if (currentTargetSpeed > maxForwardSpeed)
+        {
+            currentTargetSpeed = maxForwardSpeed;
+        }
     }
 
     public void OnDecreaseSpeed()
     {
         currentTargetSpeed -= speedIntervals;
+        if (currentTargetSpeed < maxReverseSpeed)
+        {
+            currentTargetSpeed = maxReverseSpeed;
+        }
     }
 
     public void OnHorizontal(InputValue value)
