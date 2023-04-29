@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         rigidbody.velocity = transform.up * currentSpeed;
         transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * (isReversing? 1: -1));
         //print("target speed: " + scaledTargetSpeed + ", current speed: " + rigidbody.velocity.magnitude);
-        print(GetCurrentSpeed());
+        //print(GetCurrentSpeed());
     }
 
     public void OnIncreaseSpeed()
@@ -70,6 +70,21 @@ public class Player : MonoBehaviour
     public float GetCruiseControlSpeed()
     {
         return currentTargetSpeed;
+    }
+
+    public bool GetIsReversing()
+    {
+        return isReversing;
+    }
+
+    public float GetMaxForwardSpeed()
+    {
+        return maxForwardSpeed;
+    }
+
+    public float GetMaxReverseSpeed()
+    {
+        return maxReverseSpeed;
     }
 
 
