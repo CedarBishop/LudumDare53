@@ -1,18 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speedIntervals;
+    public float realWorldToInGameScalar;
+    public float turnSpeed;
+    
+    private float currentHorizontalValue;
+    private float currentTargetSpeed;
+
+    private Rigidbody2D rigidbody;
+
     void Start()
     {
-        
+        rigidbody = GetComponent<Rigidbody2D>();    
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        rigidbody.velocity = transform.up * currentTargetSpeed * realWorldToInGameScalar;
+        Vector3.Slerp(transform.position, transform.position + (transform.right * currentHorizontalValue), turnSpeed);
+    }
+
+    public void OnIncreaseSpeed()
+    {
+        currentTargetSpeed += speedIntervals;
+    }
+
+    public void OnDecreaseSpeed()
+    {
+        currentTargetSpeed -= speedIntervals;
+    }
+
+    public void OnHorizontal(InputValue value)
+    {
+        currentHorizontalValue = value.Get<float>();
     }
 }
