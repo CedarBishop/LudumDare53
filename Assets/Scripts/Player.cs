@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         rigidbody.velocity = transform.up * currentTargetSpeed * realWorldToInGameScalar;
+        transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * -1);
         Vector3.Slerp(transform.position, transform.position + (transform.right * currentHorizontalValue), turnSpeed);
     }
 
