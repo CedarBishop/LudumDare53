@@ -220,7 +220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c815fbb9d96208143b89c952930f900f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 7827355261619729105}
+  followTarget: {fileID: 519420032}
 --- !u!1001 &7827355261619729098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,6 +273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: brakeSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3384678822720454958, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: m_Name
       value: PlayerCar
@@ -280,8 +284,3 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
---- !u!4 &7827355261619729105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 241281091035919948, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
-  m_PrefabInstance: {fileID: 7827355261619729098}
-  m_PrefabAsset: {fileID: 0}

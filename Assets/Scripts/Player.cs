@@ -9,11 +9,15 @@ public class Player : MonoBehaviour
     public float realWorldToInGameScalar;
     public float turnSpeed;
     public float accelerationSpeed;
+    public float brakeSpeed;
     public float maxForwardSpeed;
     public float maxReverseSpeed;
+
+    private bool isReversing;
     
     private float currentHorizontalValue;
     private float currentTargetSpeed;
+    private float currentSpeed;
 
     private Rigidbody2D rigidbody;
 
@@ -25,9 +29,12 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         float scaledTargetSpeed = currentTargetSpeed * realWorldToInGameScalar;
-        float currentSpeed = Mathf.Lerp(rigidbody.velocity.magnitude, scaledTargetSpeed, accelerationSpeed * Time.fixedDeltaTime);
+        currentSpeed += accelerationSpeed * Time.fixedDeltaTime * (scaledTargetSpeed - currentSpeed > 0 ? 1 : 0);
+        currentSpeed -= brakeSpeed * Time.fixedDeltaTime * (scaledTargetSpeed - currentSpeed < 0 ? 1 : 0);
+
+        isReversing = currentSpeed < 0;
         rigidbody.velocity = transform.up * currentSpeed;
-        transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * -1);
+        transform.Rotate(0,0,currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * (isReversing? 1: -1));
         print("target speed: " + scaledTargetSpeed + ", current speed: " + rigidbody.velocity.magnitude);
     }
 
