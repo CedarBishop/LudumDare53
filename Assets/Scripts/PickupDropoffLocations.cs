@@ -14,11 +14,19 @@ public class PickupDropoffLocations : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.GetComponentInParent<Player>() == null)
+        {
+            return;
+        }
         timer = 0;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if (collision.gameObject.GetComponentInParent<Player>() == null)
+        {
+            return;
+        }
         if (GameManager.instance.currentTrip == null)
         {
             return;

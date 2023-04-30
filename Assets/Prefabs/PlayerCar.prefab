@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1295354642232973002}
   - component: {fileID: 7827355261619729101}
   - component: {fileID: 7827355261619729103}
+  - component: {fileID: 7827355261619729106}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -52,8 +53,11 @@ MonoBehaviour:
   realWorldToInGameScalar: 0.2
   turnSpeed: 20
   accelerationSpeed: 5
+  brakeSpeed: 2
+  reverseAccelerationSpeed: 2
   maxForwardSpeed: 80
   maxReverseSpeed: -20
+  useNewDrivingControls: 1
 --- !u!50 &7827355261619729101
 Rigidbody2D:
   serializedVersion: 4
@@ -105,6 +109,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &7827355261619729106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384678822720454958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12c57009da37ca8448875672b05e7042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuelUsageScalar: 0.25
+  maxFuelLevel: 100
 --- !u!1 &5468157188951359532
 GameObject:
   m_ObjectHideFlags: 0

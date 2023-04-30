@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FuelTank : MonoBehaviour
 {
+    public float fuelUsageScalar;
     public float maxFuelLevel;
     private float currentFuelLevel;
 
@@ -19,6 +20,7 @@ public class FuelTank : MonoBehaviour
         {
             currentFuelLevel = maxFuelLevel;
         }
+        print("Current fuel level: " + currentFuelLevel);
     }
 
     public float GetFuelLevel()
