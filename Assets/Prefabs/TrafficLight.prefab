@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5962629828470312507}
+  - component: {fileID: 2625243527539463928}
   m_Layer: 0
   m_Name: TrafficLight
   m_TagString: Untagged
@@ -114,5 +115,25 @@ Transform:
   m_Children:
   - {fileID: 8674761483866953338}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2625243527539463928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5068112545680646454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21554f2655df4ce4b80afae30752158d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingTrafficLightColor: 1
+  greenTime: 16
+  yellowTime: 4
+  redTime: 20
+  greenLightSprite: {fileID: 901175481, guid: 84d59ceb30e197e45ac02a2369ca8e85, type: 3}
+  yellowLightSprite: {fileID: 1927115659, guid: 84d59ceb30e197e45ac02a2369ca8e85, type: 3}
+  redLightSprite: {fileID: -1353410673, guid: 84d59ceb30e197e45ac02a2369ca8e85, type: 3}
+  spriteRenderer: {fileID: 1095233229552557687}
