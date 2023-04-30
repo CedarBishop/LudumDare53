@@ -46,3 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   startingMoney: 50
+  ratingPointLossPerInterval: 0.2
+  ratingPointLessIntervalTime: 5
+  ratingPointLossPerCrash: 1

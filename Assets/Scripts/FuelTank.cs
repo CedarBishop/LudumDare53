@@ -20,7 +20,6 @@ public class FuelTank : MonoBehaviour
         {
             currentFuelLevel = maxFuelLevel;
         }
-        print("Current fuel level: " + currentFuelLevel);
     }
 
     public float GetFuelLevel()

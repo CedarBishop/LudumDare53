@@ -170,6 +170,16 @@ public class Player : MonoBehaviour
         FindObjectOfType<PhoneUI>().TogglePhoneSize();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        rigidbody.velocity = Vector2.zero;
+        rigidbody.angularVelocity = 0;
+        currentSpeed = 0.0f;
+        isReversing = false;
+
+        GameManager.instance.PlayerCrashedCar();
+    }
+
     public float GetCurrentSpeed()
     {
         return currentSpeed / realWorldToInGameScalar;
