@@ -15,6 +15,12 @@ public class GameManager : MonoBehaviour
     public Action<Trip> StartedFareEvent;
     public Action<Trip> FinishedFareEvent;
 
+    public float startingMoney;
+
+    private float currentMoneyAmount;
+    private float averageRating;
+    private int numOfTripsCompleted;
+
     private void Awake()
     {
         if (instance == null)
@@ -29,6 +35,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        SetCurrentMoney(startingMoney);
+        SetAverageRating(5.0f);
     }
 
     private void Update()
@@ -64,6 +72,28 @@ public class GameManager : MonoBehaviour
         currentTrip.startedFare = false;
         FinishedFareEvent?.Invoke(currentTrip);
         currentTrip = null;
+    }
+
+    public void SetCurrentMoney(float amount)
+    {
+        currentMoneyAmount = amount;
+        // fire event
+    }
+
+    public float GetCurrentMoney()
+    {
+        return currentMoneyAmount;
+    }
+
+    public void SetAverageRating(float rating)
+    {
+        averageRating = rating;
+        // fire event
+    }
+
+    public float GetAverageRating()
+    {
+        return averageRating;
     }
 }
 

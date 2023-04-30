@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7827355261619729101}
   - component: {fileID: 7827355261619729103}
   - component: {fileID: 7827355261619729106}
+  - component: {fileID: 3076375877963639102}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -123,6 +124,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelUsageScalar: 0.25
   maxFuelLevel: 100
+--- !u!61 &3076375877963639102
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384678822720454958}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5468157188951359532
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4243399088406378938}
   - component: {fileID: 6182640133390789700}
-  - component: {fileID: 7827355261619729102}
   m_Layer: 0
   m_Name: CarSprite
   m_TagString: Untagged
@@ -208,32 +234,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7827355261619729102
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468157188951359532}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &7710772935533911103
 GameObject:
   m_ObjectHideFlags: 0

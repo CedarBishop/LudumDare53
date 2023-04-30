@@ -165,6 +165,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void OnTogglePhoneSize()
+    {
+        FindObjectOfType<PhoneUI>().TogglePhoneSize();
+    }
+
     public float GetCurrentSpeed()
     {
         return currentSpeed / realWorldToInGameScalar;
@@ -194,10 +199,26 @@ public class Player : MonoBehaviour
         return maxReverseSpeed;
     }
 
-    public bool TryRefuel()
+    public bool TryRefuel(float pricePerUnit)
     {
+        float currentMoney = GameManager.instance.GetCurrentMoney();
+        if (currentMoney <= 0)
+        {
+            return false;
+        }
         //TODO: calculate fuel price and difference and lower from total money
-        fuelTank.SetFuelLevel(fuelTank.maxFuelLevel);
+        float priceToFillUpTank = (fuelTank.maxFuelLevel - fuelTank.GetFuelLevel()) * pricePerUnit;
+        if (currentMoney >= priceToFillUpTank)
+        {
+            GameManager.instance.SetCurrentMoney(currentMoney - priceToFillUpTank);
+            fuelTank.SetFuelLevel(fuelTank.maxFuelLevel);
+        }
+        else
+        {
+            float amountCanFill = currentMoney / pricePerUnit;
+            GameManager.instance.SetCurrentMoney(0);
+        }
+        
         return true;
     }
 
