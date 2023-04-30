@@ -1490,6 +1490,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: c5816447e96d1434a83a32e8cad2035b, type: 3}
+--- !u!1001 &6962126752269470400
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6962126750545184340, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_Name
+      value: FuelStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6962126750545184342, guid: fb962049897fbcd42a506606dde54161, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb962049897fbcd42a506606dde54161, type: 3}
 --- !u!1001 &7827355261619729098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1541,18 +1600,6 @@ PrefabInstance:
     - target: {fileID: 241281091035919948, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
-      propertyPath: brakeSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
-      propertyPath: useNewDrivingControls
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295354642232973002, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
-      propertyPath: reverseAccelerationSpeed
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3384678822720454958, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: m_Name
