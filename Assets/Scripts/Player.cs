@@ -170,6 +170,34 @@ public class Player : MonoBehaviour
         FindObjectOfType<PhoneUI>().TogglePhoneSize();
     }
 
+    public void OnAcceptOption()
+    {
+        RideServiceApp app = FindObjectOfType<RideServiceApp>();
+        if (app != null)
+        {
+            if (app.rideOfferParent.activeSelf)
+            {
+                app.AcceptRide();
+            }
+            else if (app.rideRewardParent.activeSelf)
+            {
+                app.DismissReward();
+            }
+        }
+    }
+
+    public void OnDeclineOption()
+    {
+        RideServiceApp app = FindObjectOfType<RideServiceApp>();
+        if (app != null)
+        {
+            if (app.rideOfferParent.activeSelf)
+            {
+                app.DeclineRide();
+            }
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         rigidbody.velocity = Vector2.zero;

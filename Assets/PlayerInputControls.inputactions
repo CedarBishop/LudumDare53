@@ -49,6 +49,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "AcceptOption",
+                    "type": "Button",
+                    "id": "6eb0bbf3-7593-42a9-bc5d-b95ece57b589",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DeclineOption",
+                    "type": "Button",
+                    "id": "62a6ecaf-c1af-4c96-8ede-c26f06435cbc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -163,6 +181,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "24a2cd00-1210-406c-acb1-0835f862e6cf",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "1D Axis",
                     "id": "2313bbc3-baa2-44b4-9353-f44cb59039bd",
                     "path": "1DAxis",
@@ -229,6 +258,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "e9d98f51-2be1-4f3d-902a-5afc193d99cc",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedInput",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "7bbc6369-cb7f-45a5-9eeb-d71269136bc9",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1c0bd915-c904-480b-9a5e-d55da5e1da9c",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedInput",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "457bd41e-4abd-4b34-a934-4314c3e8bfd1",
                     "path": "<Keyboard>/k",
@@ -236,6 +298,61 @@
                     "processors": "",
                     "groups": "",
                     "action": "TogglePhoneSize",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bea36bfd-e3f2-449e-aaef-a98e0ae485f5",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TogglePhoneSize",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "da9dcc0f-56f3-404c-960c-2d5784bcf9b0",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AcceptOption",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "726e3f87-f2db-468b-b14a-47be155f5018",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AcceptOption",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc236fe1-3df0-47f5-89b6-d81c8963d450",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DeclineOption",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83507034-2a04-4056-9792-0dc1cbb5e484",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DeclineOption",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
