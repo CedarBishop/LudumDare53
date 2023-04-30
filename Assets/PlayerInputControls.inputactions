@@ -40,6 +40,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "TogglePhoneSize",
+                    "type": "Button",
+                    "id": "48ae1344-8ddf-419d-92b0-0fefb4783f9a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -218,6 +227,17 @@
                     "action": "SpeedInput",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "457bd41e-4abd-4b34-a934-4314c3e8bfd1",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TogglePhoneSize",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

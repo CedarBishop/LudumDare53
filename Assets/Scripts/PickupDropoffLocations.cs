@@ -14,7 +14,7 @@ public class PickupDropoffLocations : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponentInParent<Player>() == null)
+        if (collision.gameObject.GetComponent<Player>() == null)
         {
             return;
         }
@@ -23,7 +23,7 @@ public class PickupDropoffLocations : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponentInParent<Player>() == null)
+        if (collision.gameObject.GetComponent<Player>() == null)
         {
             return;
         }
