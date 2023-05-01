@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AIDestroyer : MonoBehaviour
 {
+    public Vector3 gizmoSize;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<AICar>())
@@ -11,4 +13,14 @@ public class AIDestroyer : MonoBehaviour
             collision.gameObject.GetComponent<AICar>().FadeOnDestroy();
         }
     }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        gizmoSize = transform.localScale;
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(transform.position, gizmoSize);
+    }
+#endif
+
 }

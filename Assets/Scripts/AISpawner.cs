@@ -37,4 +37,14 @@ public class AISpawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(minSpawnTimeInterval, maxSpawnTimeInterval));
         }
     }
+
+    public float gizmoRadius = 1f;
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(transform.position, gizmoRadius);       
+    }
+#endif
+
 }
