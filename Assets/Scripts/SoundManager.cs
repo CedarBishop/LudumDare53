@@ -44,6 +44,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioSource sfxPlayer;
     [SerializeField] private AudioSource carEnginePlayer;
 
+    [SerializeField] private AudioClip elevatorMusic;
+    [SerializeField] private AudioClip inGameBackgroundMusic;
+
 
     [SerializeField] private List<AudioPair> audioPairs;
     private Dictionary<AudioType, SoundSetting> _audioPairDict;
@@ -114,6 +117,13 @@ public class SoundManager : MonoBehaviour
         sfxPlayer.Stop();
     }
 
+
+    public void PlayLevelBGMusic()
+    {
+        backgroundPlayer.clip = inGameBackgroundMusic;
+        backgroundPlayer.volume -= 0.07f;
+        backgroundPlayer.Play();
+    }
 
 
 }

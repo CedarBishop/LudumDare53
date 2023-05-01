@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: PickUpSound
   m_EditorClassIdentifier: 
   _sounds:
-  - {fileID: 8300000, guid: 252eee98a24a2b54685f233adc4e6711, type: 3}
+  - {fileID: 8300000, guid: fc5a474c7ccef9145b803bd9be90ffd4, type: 3}
   _defaultVolume: 1

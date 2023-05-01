@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sounds:
   - {fileID: 8300000, guid: aa9d689ca27bbfb40b6c7677283e1ee2, type: 3}
-  _defaultVolume: 0.1
+  _defaultVolume: 0.206

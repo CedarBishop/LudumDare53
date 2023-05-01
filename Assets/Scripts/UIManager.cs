@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour
     public void PlayGame()
     {
         GameManager.instance.SetGameState(GameState.Play);
+        SoundManager.instance.PlayLevelBGMusic();
     }
 
     public void RestartScene()

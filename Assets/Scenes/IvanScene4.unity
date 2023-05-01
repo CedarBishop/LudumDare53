@@ -11869,9 +11869,37 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.13
       objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729708, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729708, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729708, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: aacd85be05eb08f4a96b4c7231427d25, type: 3}
+    - target: {fileID: 6450590424178729708, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729709, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: elevatorMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: aacd85be05eb08f4a96b4c7231427d25, type: 3}
+    - target: {fileID: 6450590424178729709, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: inGameBackgroundMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 75ada79af883bbd478d8becb035f268b, type: 3}
     - target: {fileID: 6450590424178729710, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
       propertyPath: m_Name
       value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6864337984942046486, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
