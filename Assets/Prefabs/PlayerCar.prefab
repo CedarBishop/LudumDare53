@@ -126,6 +126,7 @@ Transform:
   - {fileID: 6785475312770067712}
   - {fileID: 4243399088406378938}
   - {fileID: 216192786}
+  - {fileID: 7591257388128099195}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -399,3 +400,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &8790597363108046958
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 241281091035919948}
+    m_Modifications:
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.634
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.50105166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.5010517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4989461
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.49894616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -89.759
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011681221169610268, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+      propertyPath: m_Name
+      value: SmokeParticleSystem
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+--- !u!4 &7591257388128099195 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1200184999608136469, guid: 4c4612969fea2314a8cf4cfa3fb8a6c3, type: 3}
+  m_PrefabInstance: {fileID: 8790597363108046958}
+  m_PrefabAsset: {fileID: 0}
