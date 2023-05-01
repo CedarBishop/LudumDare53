@@ -168,6 +168,7 @@ public class Player : MonoBehaviour
     public void OnTogglePhoneSize()
     {
         FindObjectOfType<PhoneUI>().TogglePhoneSize();
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.UIButton);
     }
 
     public void OnAcceptOption()
@@ -243,6 +244,7 @@ public class Player : MonoBehaviour
         float currentMoney = GameManager.instance.GetCurrentMoney();
         if (currentMoney <= 0)
         {
+            SoundManager.instance.PlayShotSound(SoundManager.AudioType.NoMoney);
             return false;
         }
         //TODO: calculate fuel price and difference and lower from total money
@@ -251,6 +253,7 @@ public class Player : MonoBehaviour
         {
             GameManager.instance.SetCurrentMoney(currentMoney - priceToFillUpTank);
             fuelTank.SetFuelLevel(fuelTank.maxFuelLevel);
+            SoundManager.instance.PlayShotSound(SoundManager.AudioType.FuelUp);
         }
         else
         {

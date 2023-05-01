@@ -28,11 +28,13 @@ public class RideServiceApp : MonoBehaviour
     {
         rideOfferParent.SetActive(false);
         GameManager.instance.SelectTrip(currentTripOption);
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.UIButton);
     }
 
     public void DeclineRide()
     {
         StartCoroutine("CoCreateNewTripChoice");
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.UIButton);
     }
 
     public void DismissReward()
