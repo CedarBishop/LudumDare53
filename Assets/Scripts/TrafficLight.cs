@@ -7,6 +7,7 @@ public enum TrafficLightColor {Invalid, Green, Yellow, Red}
 public class TrafficLight : MonoBehaviour
 {
     public TrafficLightColor startingTrafficLightColor;
+    public OrthogonalDirection orthogonalDirection;
 
     public float greenTime;
     public float yellowTime;
