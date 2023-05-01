@@ -141,6 +141,11 @@ public class GameManager : MonoBehaviour
         if (currentTrip.time > currentTrip.expectedTime)
         {
             currentTrip.rating -= Mathf.FloorToInt((currentTrip.time - currentTrip.expectedTime) / ratingPointLessIntervalTime) * ratingPointLossPerInterval;
+            
+            if(currentTrip.rating < 0) 
+            { 
+                currentTrip.rating = 1f; 
+            }
         }        
 
         // calculate fare of this trip
