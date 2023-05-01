@@ -45,7 +45,7 @@ public class RideServiceApp : MonoBehaviour
     void OnFinishedFare(Trip trip)
     {
         rideRewardParent.SetActive(true);
-        endPassengerText.text = "Completed ride for " + trip.passengerName;
+        endPassengerText.text = "completed ride for " + trip.passengerName;
         endFareText.text = "$" + trip.fare.ToString("F1");
         endRatingText.text = trip.rating.ToString("F1") + " Stars";
     }

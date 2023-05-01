@@ -10,6 +10,6 @@ public class AverageRatingUI : MonoBehaviour
 
     private void Update()
     {
-        ratingText.text = "Rating: " + GameManager.instance.GetAverageRating().ToString("F1");
+        ratingText.text = "RATING: " + GameManager.instance.GetAverageRating().ToString("F1");
     }
 }
