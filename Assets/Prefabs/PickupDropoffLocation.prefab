@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1573435393512122170}
   - component: {fileID: 1573435393512122171}
   - component: {fileID: 1573435393512122168}
+  - component: {fileID: -8735777995054011347}
   m_Layer: 0
   m_Name: PickupDropoffLocation
   m_TagString: Untagged
@@ -125,3 +126,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-8735777995054011347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573435393512122148}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68e34340c80a0140b41961f4d328dd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

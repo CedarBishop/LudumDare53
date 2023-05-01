@@ -108,6 +108,15 @@ public class Player : MonoBehaviour
             currentSpeed = maxReverseSpeed * realWorldToInGameScalar;
         }
 
+    
+        // Play sound of driving - gotta write a separate script tuning pitch up and down
+        //if(currentSpeed != 0)
+        //{
+        //    SoundManager.instance.PlayShotSound(SoundManager.AudioType.Accelerating);
+        //}
+
+
+
         isReversing = currentSpeed < 0;
         rigidbody.velocity = transform.up * currentSpeed;
         transform.Rotate(0, 0, currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * (isReversing ? 1 : -1));

@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
         currentTrip.dropoffLocation.gameObject.SetActive(true);
         currentTrip.time = 0;
         currentTrip.startedFare = true;
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.DropOff);
         StartedFareEvent?.Invoke(currentTrip);
     }
 
@@ -97,6 +98,7 @@ public class GameManager : MonoBehaviour
         }        
 
         numOfTripsCompleted++;
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.DropOff);
         FinishedFareEvent?.Invoke(currentTrip);
         currentTrip = null;
     }
