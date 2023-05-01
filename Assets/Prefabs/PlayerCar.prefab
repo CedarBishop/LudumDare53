@@ -64,7 +64,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 33
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: a667e16f9e7d9e545b8a57319ece8e4f, type: 2}
   m_TargetDisplay: 0
@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 7827355261619729103}
   - component: {fileID: 7827355261619729106}
   - component: {fileID: 14413762315561290}
+  - component: {fileID: 7827355261619729111}
   m_Layer: 0
   m_Name: PlayerCar
   m_TagString: Untagged
@@ -232,6 +233,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.5, y: 1}
   m_Direction: 0
+--- !u!114 &7827355261619729111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384678822720454958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a968a2c649ce2ec4d95e81c0d3dbb4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpeed: 5
+  maxSpeed: 0
+  minPitch: 0.9
+  maxPitch: 2.4
+  pitchDivider: 1000
 --- !u!1 &5468157188951359532
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,12 +42,20 @@ public class SoundManager : MonoBehaviour
 
     [SerializeField] private AudioSource backgroundPlayer;
     [SerializeField] private AudioSource sfxPlayer;
+    [SerializeField] private AudioSource carEnginePlayer;
 
 
     [SerializeField] private List<AudioPair> audioPairs;
     private Dictionary<AudioType, SoundSetting> _audioPairDict;
 
     [SerializeField] private float defaultvolume = 50f;
+
+    #region Getters
+    public AudioSource CarEnginePlayer ()
+    { return this.carEnginePlayer; }
+
+    #endregion
+
 
     private void Awake()
     {
@@ -105,5 +113,7 @@ public class SoundManager : MonoBehaviour
     {
         sfxPlayer.Stop();
     }
+
+
 
 }
