@@ -18,18 +18,49 @@ public class PinHolder : MonoBehaviour
         currentObjectives = new List<(LocationTracker objectivePosition, RectTransform markerRectTransform)>();
     }
 
+
+    public float scaler;
+    public float minX;
+    public float maxX;
+    public float minY;
+    public float maxY;
+    
+
     // Update is called once per frame
     void Update()
     {
         foreach ((LocationTracker objectivePosition, RectTransform markerRectTransform) marker in currentObjectives)
         {
-            Vector3 offset = Vector3.ClampMagnitude(marker.objectivePosition.transform.position - playerObject.transform.position, minimapCamera.orthographicSize);
-           // Vector3 offset = Vector3.ClampMagnitude(buff, minimapCamera.orthographicSize);
+            Vector3 offset = Vector3.ClampMagnitude(marker.objectivePosition.transform.position - playerObject.transform.position, 
+                minimapCamera.orthographicSize);
             offset = offset / minimapCamera.orthographicSize * (markerParentRectTransform.rect.width / 2f);
-            marker.markerRectTransform.anchoredPosition = new Vector2(offset.x, offset.z);
-            print(marker.markerRectTransform.anchoredPosition + " = " + offset.x + offset.z);
+
+            Vector3 offsetDir = (marker.objectivePosition.transform.position - playerObject.transform.position);
+            offsetDir = offsetDir * scaler;
+
+            if (offsetDir.x > maxX)
+            {
+                offsetDir.x = maxX;
+            }
+            if (offsetDir.x < minX)
+            {
+                offsetDir.x = minX;
+            }
+            if (offsetDir.y > maxY)
+            {
+                offsetDir.y = maxY;
+            }
+            if (offsetDir.y < minY)
+            {
+                offsetDir.y = minY;
+            }
+
+            //marker.markerRectTransform.anchoredPosition = new Vector2(offset.x, offset.z);
+            marker.markerRectTransform.anchoredPosition = new Vector2(offsetDir.x, offsetDir.y);
+           
         }
     }
+           // Vector3 offset = Vector3.ClampMagnitude(buff, minimapCamera.orthographicSize);
 
     public void AddObjectiveMarker(LocationTracker sender)
     {

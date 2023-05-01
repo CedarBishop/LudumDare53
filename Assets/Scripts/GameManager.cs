@@ -2,9 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem.LowLevel;
+using static GameManager;
 
 public class GameManager : MonoBehaviour
 {
+    public enum GameState
+    {
+        Initialize,
+        Play,
+        Pause
+    }
+
+
     public static GameManager instance = null;
 
     public LevelManager levelManager;
@@ -24,6 +34,25 @@ public class GameManager : MonoBehaviour
     private float averageRating;
     private int numOfTripsCompleted;
 
+    // Game State
+    private GameState gameState = GameState.Initialize;
+
+
+    #region Getter/Setter
+    public GameState myGameState
+    { 
+        get 
+        { 
+            return gameState; 
+        } 
+        set 
+        { 
+            gameState = value; 
+        } 
+    }
+
+    #endregion
+
     private void Awake()
     {
         if (instance == null)
@@ -34,12 +63,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
 
     private void Start()
     {
         SetCurrentMoney(startingMoney);
         SetAverageRating(5.0f);
+
+        //SetGameState(GameState.Initialize);
     }
 
     private void Update()
@@ -51,6 +84,24 @@ public class GameManager : MonoBehaviour
                 currentTrip.time += Time.deltaTime;
             }
         }
+    }
+
+    private void SetGameState(GameState gameState)
+    {
+        if(gameState == GameState.Initialize)
+        {
+            PauseGame();
+            UIManager.instance.SetUIState(UIState.Title);
+        }
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
     }
 
     public void SelectTrip (Trip trip)
@@ -159,6 +210,7 @@ public class Trip
     {
         return Vector3.Distance(pickupLocation.transform.position, dropoffLocation.transform.position);
     }
+
 
     public PickupDropoffLocations pickupLocation;
     public PickupDropoffLocations dropoffLocation;
