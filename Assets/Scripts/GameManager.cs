@@ -168,7 +168,7 @@ public class GameManager : MonoBehaviour
     {
         if (currentTrip != null)
         {
-            if (currentTrip.startedFare)
+            if (currentTrip.startedFare && currentTrip.rating > 1f)
             {
                 currentTrip.rating -= ratingPointLossPerCrash;
             }
