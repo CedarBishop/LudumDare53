@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LostSound
   m_EditorClassIdentifier: 
   _sounds:
-  - {fileID: 8300000, guid: 421ef9e85f202df4aa3713b0b4de0180, type: 3}
+  - {fileID: 8300000, guid: 8d0a81851ea5f4c44ab229c91100d54f, type: 3}
   _defaultVolume: 1

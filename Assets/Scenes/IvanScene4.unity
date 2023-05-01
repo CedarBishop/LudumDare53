@@ -5720,7 +5720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743500667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.07, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9125,9 +9125,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6450590424178729707, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729707, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6450590424178729707, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 51591f929ac0c7d44af70e93f0a339ed, type: 3}
     - target: {fileID: 6450590424178729710, guid: df380bf177884b14da0fce032abb8fc9, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -9204,8 +9212,24 @@ PrefabInstance:
       value: PlayerCar
       objectReference: {fileID: 0}
     - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: maxPitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: maxSpeed
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: minPitch
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: minSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7827355261619729111, guid: e0f139b12775d654fa62ac4cebf71a0a, type: 3}
       propertyPath: pitchDivider

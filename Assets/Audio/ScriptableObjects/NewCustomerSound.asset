@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NewCustomerSound
   m_EditorClassIdentifier: 
   _sounds:
-  - {fileID: 8300000, guid: 5270ebf5fb6d1b3409baf5816d3d2052, type: 3}
-  _defaultVolume: 1
+  - {fileID: 8300000, guid: fc5a474c7ccef9145b803bd9be90ffd4, type: 3}
+  _defaultVolume: 0.04

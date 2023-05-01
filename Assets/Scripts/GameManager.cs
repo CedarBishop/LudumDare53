@@ -128,7 +128,7 @@ public class GameManager : MonoBehaviour
         currentTrip.dropoffLocation.gameObject.SetActive(true);
         currentTrip.time = 0;
         currentTrip.startedFare = true;
-        SoundManager.instance.PlayShotSound(SoundManager.AudioType.DropOff);
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.NewCustomer);
         StartedFareEvent?.Invoke(currentTrip);
     }
 
@@ -213,7 +213,10 @@ public class Trip
         passengerName = GetRandomName();
         fare = GetDistance() * 5;
         rating = 5.0f;
-        expectedTime = GetDistance() * 2;        
+        expectedTime = GetDistance() * 2;
+
+        // Play pop up sound
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.NewCustomer);
     }
 
     public float GetDistance()

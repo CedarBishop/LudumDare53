@@ -15,4 +15,4 @@ MonoBehaviour:
   _sounds:
   - {fileID: 8300000, guid: e081ac2c7d9bb2e4bb762b53da13484c, type: 3}
   - {fileID: 8300000, guid: 771c01001922b17439c611c2f6f6bc77, type: 3}
-  _defaultVolume: 0.5
+  _defaultVolume: 0.28
