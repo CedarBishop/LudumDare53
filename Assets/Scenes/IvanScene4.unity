@@ -6948,6 +6948,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1250526216544657808, guid: e03209841797a924a9fee67747cec70a, type: 3}
+      propertyPath: m_Name
+      value: OpeningCredit
+      objectReference: {fileID: 0}
     - target: {fileID: 2012965386456178324, guid: e03209841797a924a9fee67747cec70a, type: 3}
       propertyPath: m_IsActive
       value: 1
