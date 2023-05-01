@@ -76,7 +76,10 @@ MonoBehaviour:
     accept
 
 
-    EAST              decline'
+    EAST              decline
+
+
+    NORTH    open/close phone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5935a3cd24871c40ae7f418f0a52061, type: 2}
   m_sharedMaterial: {fileID: -4312127575487829501, guid: a5935a3cd24871c40ae7f418f0a52061, type: 2}
@@ -495,14 +498,17 @@ MonoBehaviour:
   m_text: 'W/S         +/- speed
 
 
-    A/D         turn
+    A/D              turn
 
 
-    ENTER        accept
+    ENTER          
+    accept
 
 
-    BACKSPACE   
-    decline'
+    BACKSPACE      decline
+
+
+    K     open/close phone'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5935a3cd24871c40ae7f418f0a52061, type: 2}
   m_sharedMaterial: {fileID: -4312127575487829501, guid: a5935a3cd24871c40ae7f418f0a52061, type: 2}

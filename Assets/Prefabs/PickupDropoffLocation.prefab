@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 992be456ddb1ea8499d692b954b10dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToComplete: 3
+  timeToComplete: 4
+  distanceToComplete: 1
 --- !u!61 &1573435393512122168
 BoxCollider2D:
   m_ObjectHideFlags: 0

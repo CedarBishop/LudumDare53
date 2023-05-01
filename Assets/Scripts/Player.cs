@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class Player : MonoBehaviour
 {
+    public static Action OutOfFuelAction;
+
     public float speedIntervals;
     public float realWorldToInGameScalar;
     public float turnSpeed;
@@ -28,8 +31,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigidbody;
     private FuelTank fuelTank;
 
+    private bool hasTriggeredEndOfGame = false;
+
     void Start()
     {
+        hasTriggeredEndOfGame = false;
         rigidbody = GetComponent<Rigidbody2D>();
         fuelTank = GetComponent<FuelTank>();
     }
@@ -77,6 +83,15 @@ public class Player : MonoBehaviour
                 currentSpeed -= brakeSpeed * Time.fixedDeltaTime;
                 rigidbody.velocity = transform.up * currentSpeed;
                 transform.Rotate(0, 0, currentHorizontalValue * turnSpeed * rigidbody.velocity.magnitude * Time.fixedDeltaTime * (isReversing ? 1 : -1));
+            }
+            else
+            {
+                if (!hasTriggeredEndOfGame)
+                {
+                    hasTriggeredEndOfGame = true;
+                    OutOfFuelAction?.Invoke();
+                    StartCoroutine("TriggerEndOfGame");
+                }
             }
             return;
         }
@@ -180,6 +195,21 @@ public class Player : MonoBehaviour
         SoundManager.instance.PlayShotSound(SoundManager.AudioType.UIButton);
     }
 
+    public void OnTogglePause()
+    {
+        
+        if (GameManager.instance.myGameState == GameState.Play)
+        {
+            print("Pause");
+            GameManager.instance.SetGameState(GameState.Pause);
+        }
+        else if (GameManager.instance.myGameState == GameState.Pause)
+        {
+            print("Play");
+            GameManager.instance.SetGameState(GameState.Play);
+        }
+    }
+
     public void OnAcceptOption()
     {
         RideServiceApp app = FindObjectOfType<RideServiceApp>();
@@ -273,5 +303,9 @@ public class Player : MonoBehaviour
         return true;
     }
 
-
+    IEnumerator TriggerEndOfGame()
+    {
+        yield return new WaitForSeconds(2);
+        UIManager.instance.RestartScene();
+    }
 }

@@ -5,43 +5,36 @@ using UnityEngine;
 public class PickupDropoffLocations : MonoBehaviour
 {
     public float timeToComplete;
+    public float distanceToComplete;
     private float timer;
+    private Player player;
     void Start()
     {
+        player = FindObjectOfType<Player>();
         bool shouldSetActive = GameManager.instance.currentTrip != null && GameManager.instance.currentTrip.pickupLocation == this;
         gameObject.SetActive(shouldSetActive);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if (collision.gameObject.GetComponent<Player>() == null)
+        if (Vector3.Distance(transform.position, player.transform.position) < distanceToComplete)
         {
-            return;
-        }
-        timer = 0;
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.GetComponent<Player>() == null)
-        {
-            return;
-        }
-        if (GameManager.instance.currentTrip == null)
-        {
-            return;
-        }
-        timer += Time.fixedDeltaTime;
-        if (timer >= timeToComplete)
-        {
-            if (GameManager.instance.currentTrip.pickupLocation.gameObject == gameObject)
+            timer += Time.fixedDeltaTime;
+            if (timer >= timeToComplete)
             {
-                GameManager.instance.PickedUpPassenger();
+                if (GameManager.instance.currentTrip.pickupLocation.gameObject == gameObject)
+                {
+                    GameManager.instance.PickedUpPassenger();
+                }
+                if (GameManager.instance.currentTrip.dropoffLocation.gameObject == gameObject)
+                {
+                    GameManager.instance.DroppedOffPasenger();
+                }
             }
-            if (GameManager.instance.currentTrip.dropoffLocation.gameObject == gameObject)
-            {
-                GameManager.instance.DroppedOffPasenger();
-            }
+        }
+        else
+        {
+            timer = 0;
         }
     }
 }

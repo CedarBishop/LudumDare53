@@ -30,31 +30,41 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        SetUIState(UIState.Title);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SetUIState(UIState uIState)
     {
-        titleUI.SetActive(uIState == UIState.Title);
-        //print(titleUI.gameObject.activeInHierarchy);
-        tutorialUI.SetActive(uIState == UIState.Pause);
-        inGameUI.SetActive(uIState == UIState.Play);
-        pauseUI.SetActive(uIState == UIState.Pause || uIState == UIState.Title);
-        
+        pauseUI.SetActive(false);
+        titleUI.SetActive(false);
+        tutorialUI.SetActive(false);
+        inGameUI.SetActive(false);
+        switch (uIState)
+        {
+            case UIState.Title:
+                pauseUI.SetActive(true);
+                titleUI.SetActive(true);
+                StartCoroutine("GoToTutorial");
+                break;
+            case UIState.Play:
+                inGameUI.SetActive(true);
+                break;
+            case UIState.Pause:
+                pauseUI.SetActive(true);
+                tutorialUI.SetActive(true);
+                break;
+            default:
+                inGameUI.SetActive(true);
+                break;
+        }
+    }
+
+    IEnumerator GoToTutorial()
+    {
+        yield return new WaitForSeconds(3);
+        GameManager.instance.SetGameState(GameState.Pause);
     }
 
     public void PlayGame()
     {
-        SetUIState(UIState.Play);
+        GameManager.instance.SetGameState(GameState.Play);
     }
 
     public void RestartScene()
@@ -75,10 +85,4 @@ public class UIManager : MonoBehaviour
     }
 
     #endregion
-
-    private IEnumerator Wait(float waitTime)
-    {
-        yield return new WaitForSeconds(waitTime);
-    }
-
 }

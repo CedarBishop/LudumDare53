@@ -4,17 +4,15 @@ using UnityEngine;
 using System;
 using UnityEngine.InputSystem.LowLevel;
 using static GameManager;
+public enum GameState
+{
+    Initialize,
+    Play,
+    Pause
+}
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState
-    {
-        Initialize,
-        Play,
-        Pause
-    }
-
-
     public static GameManager instance = null;
 
     public LevelManager levelManager;
@@ -72,7 +70,7 @@ public class GameManager : MonoBehaviour
         SetCurrentMoney(startingMoney);
         SetAverageRating(5.0f);
 
-        //SetGameState(GameState.Initialize);
+        SetGameState(GameState.Initialize);
     }
 
     private void Update()
@@ -86,22 +84,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SetGameState(GameState gameState)
+    public void SetGameState(GameState gameState)
     {
-        if(gameState == GameState.Initialize)
+        myGameState = gameState;
+        switch (gameState)
         {
-            PauseGame();
-            UIManager.instance.SetUIState(UIState.Title);
+            case GameState.Initialize:
+                UIManager.instance.SetUIState(UIState.Title);
+                break;
+            case GameState.Play:
+                ResumeGame();
+                break;
+            case GameState.Pause:
+                PauseGame();
+                break;
+            default:
+                break;
         }
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0;
+        UIManager.instance.SetUIState(UIState.Pause);
     }
     public void ResumeGame()
     {
         Time.timeScale = 1;
+        UIManager.instance.SetUIState(UIState.Play);
     }
 
     public void SelectTrip (Trip trip)
@@ -200,7 +210,7 @@ public class Trip
         } while (potentialDropoffLocation == potentialPickupLocation);
         pickupLocation = potentialPickupLocation;
         dropoffLocation = potentialDropoffLocation;
-        passengerName = "John";
+        passengerName = GetRandomName();
         fare = GetDistance() * 5;
         rating = 5.0f;
         expectedTime = GetDistance() * 2;        
@@ -209,6 +219,12 @@ public class Trip
     public float GetDistance()
     {
         return Vector3.Distance(pickupLocation.transform.position, dropoffLocation.transform.position);
+    }
+
+    string GetRandomName()
+    {
+        string[] names = {"John", "Sally", "Laura", "Joseph", "Matt", "Amy", "Hope", "James", "Karen", "Frankie", "Ivan", "Cedar", "Howard", "Emily", "Jenifer", "Dani", "Dave", "Andrew" };
+        return names[UnityEngine.Random.Range(0, names.Length)];
     }
 
 
