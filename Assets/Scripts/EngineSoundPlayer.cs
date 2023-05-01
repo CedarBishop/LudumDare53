@@ -28,17 +28,11 @@ public class EngineSoundPlayer : MonoBehaviour
 
     void Update()
     {
-        print("Current speed - " + currentSpeed);
-        print("Current pitchFromCar - " + carRb.velocity.magnitude / 50f);
-        print("---------");
         EngineSound();
     }
 
     void EngineSound()
     {
-        print("Current speed - " + currentSpeed);
-        print("Current pitchFromCar - " + carRb.velocity.magnitude / 50f);
-        print("---------" );
         currentSpeed = carRb.velocity.magnitude;
         pitchFromCar = carRb.velocity.magnitude / 50f;
 
