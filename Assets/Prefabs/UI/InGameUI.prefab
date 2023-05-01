@@ -1126,7 +1126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7366326454504282481, guid: 669446b6f3298a245b6e0045b443ba31, type: 3}
       propertyPath: m_Name
-      value: TutorialParent
+      value: OpeningCredits
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366326454504282481, guid: 669446b6f3298a245b6e0045b443ba31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
