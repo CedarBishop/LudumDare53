@@ -205,6 +205,7 @@ public class Player : MonoBehaviour
         currentSpeed = 0.0f;
         isReversing = false;
 
+        SoundManager.instance.PlayShotSound(SoundManager.AudioType.Crash);
         GameManager.instance.PlayerCrashedCar();
     }
 
