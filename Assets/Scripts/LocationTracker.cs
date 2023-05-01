@@ -4,16 +4,9 @@ using UnityEngine;
 
 public class LocationTracker : MonoBehaviour
 {
-
-    //private void Start()
-    //{
-    //    GameManager.instance.StartedFareEvent += EnablePin;
-    //    GameManager.instance.FinishedFareEvent += DisablePin;
-    //}
-
     private void OnEnable()
     {
-        EnablePin();
+        EnablePin();       
     }
     private void OnDisable()
     {

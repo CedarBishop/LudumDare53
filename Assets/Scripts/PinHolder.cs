@@ -10,7 +10,7 @@ public class PinHolder : MonoBehaviour
     public RectTransform markerParentRectTransform;
     public Camera minimapCamera;
 
-    private List<(LocationTracker objectivePosition, RectTransform markerRectTransform)> currentObjectives;
+    public List<(LocationTracker objectivePosition, RectTransform markerRectTransform)> currentObjectives;
 
     // Start is called before the first frame update
     void Awake()
