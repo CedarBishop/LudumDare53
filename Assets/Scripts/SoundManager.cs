@@ -121,7 +121,7 @@ public class SoundManager : MonoBehaviour
     public void PlayLevelBGMusic()
     {
         backgroundPlayer.clip = inGameBackgroundMusic;
-        backgroundPlayer.volume -= 0.07f;
+        backgroundPlayer.volume -= 0.1f;
         backgroundPlayer.Play();
     }
 
