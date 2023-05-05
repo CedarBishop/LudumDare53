@@ -2591,7 +2591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3294729355117811856, guid: 3f8f6e616e27f5244afe69e08acb86bc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0474663
+      value: -5.51
       objectReference: {fileID: 0}
     - target: {fileID: 3294729355117811856, guid: 3f8f6e616e27f5244afe69e08acb86bc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11411,26 +11411,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: maxX
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: maxY
-      value: 79
-      objectReference: {fileID: 0}
-    - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: minX
-      value: -75
-      objectReference: {fileID: 0}
-    - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: minY
-      value: -115
-      objectReference: {fileID: 0}
-    - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: scaler
-      value: 6.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 878699916, guid: e03209841797a924a9fee67747cec70a, type: 3}
       propertyPath: playerObject
       value: 
       objectReference: {fileID: 1640232415}
@@ -11717,10 +11697,6 @@ PrefabInstance:
     - target: {fileID: 5055424052607503483, guid: e03209841797a924a9fee67747cec70a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5198391985789440038, guid: e03209841797a924a9fee67747cec70a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.800003
       objectReference: {fileID: 0}
     - target: {fileID: 6783329150067186838, guid: e03209841797a924a9fee67747cec70a, type: 3}
       propertyPath: m_AnchorMax.y

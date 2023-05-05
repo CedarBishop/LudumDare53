@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5725428713860743995}
   - component: {fileID: 5725428713860743996}
   - component: {fileID: 5725428713860743994}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AICar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,6 +148,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 5725428713860743997}
     m_Modifications:
+    - target: {fileID: 7618627737840258566, guid: 308044a716212704797047ddf3df86cb, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7618627737840258567, guid: 308044a716212704797047ddf3df86cb, type: 3}
       propertyPath: player
       value: 
@@ -155,6 +159,10 @@ PrefabInstance:
     - target: {fileID: 7618627737840258568, guid: 308044a716212704797047ddf3df86cb, type: 3}
       propertyPath: m_Name
       value: CarShadow
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618627737840258568, guid: 308044a716212704797047ddf3df86cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7618627737840258569, guid: 308044a716212704797047ddf3df86cb, type: 3}
       propertyPath: m_RootOrder

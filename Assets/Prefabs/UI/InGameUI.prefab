@@ -324,7 +324,7 @@ RectTransform:
   - {fileID: 2068146161016619090}
   - {fileID: 4603124422912200391}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1244,11 +1244,11 @@ MonoBehaviour:
   playerObject: {fileID: 0}
   markerParentRectTransform: {fileID: 3409843908454804099}
   minimapCamera: {fileID: 0}
-  scaler: 0
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
+  scaler: 6.4
+  minX: -75
+  maxX: 75
+  minY: -115
+  maxY: 79
 --- !u!224 &3409843908454804099 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8917274233801472149, guid: 8e77268cb9d0ebb4cbe37725ebbc3199, type: 3}
